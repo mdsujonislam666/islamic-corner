@@ -1,9 +1,10 @@
-import React, { use } from 'react';
+import React, { use, useRef } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 
 const Login = () => {
-    const {signInWithGoogle, signInUser} = use(AuthContext);
+    const {signInWithGoogle, signInUser, resetPassword} = use(AuthContext);
+    const emailRef = useRef(null);
 
     const handleLogin = (e) =>{
         e.preventDefault();
@@ -20,6 +21,21 @@ const Login = () => {
         })
     }
 
+    const resetEmailPassword = (e) =>{
+        e.preventDefault();
+        const email = emailRef.current.value;
+        console.log(email);
+
+        resetPassword(email)
+        .then(result =>{
+            alert('successfully')
+            console.log(result);
+        })
+        .catch(error =>{
+            console.log(error.massage);
+        })
+    }
+
     const handleGoogleSignInn = () =>{
         signInWithGoogle()
         .then(result =>{
@@ -31,15 +47,15 @@ const Login = () => {
     }
 
     return (
-        <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl mt-10">
             <h1 className='text-5xl font-bold mx-auto'>Login Now!</h1>
             <form onSubmit={handleLogin} className="card-body">
                 <fieldset className="fieldset">
                     <label className="label">Email</label>
-                    <input type="email" name="email" className="input" placeholder="Email" />
+                    <input ref={emailRef} type="email" name="email" className="input" placeholder="Email" />
                     <label className="label">Password</label>
                     <input type="password" name="password" className="input" placeholder="Password" />
-                    <div><a className="link link-hover">Forgot password?</a></div>
+                    <div><button type='button' onClick={resetEmailPassword} className="cursor-pointer hover:underline">Forgot password?</button></div>
                     <button className="btn btn-neutral mt-4">Login</button>
 
                     {/* Google */}
