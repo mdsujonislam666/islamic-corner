@@ -11,7 +11,7 @@ const Product = ({ product }) => {
                     <img
                         src={property_image}
                         alt="Shoes"
-                        className="rounded-xl w-full h-66" />
+                        className="rounded-xl w-full h-40 lg:h-66" />
                 </figure>
                 <div className="card-body space-y-3">
                     <h2 className="card-title text-2xl font-bold">{property_name}</h2>
