@@ -12,6 +12,9 @@ import Register from './Register/Register.jsx';
 import MyProducts from './Components/MyProducts/MyProducts.jsx';
 import MyRating from './Components/MyRating/MyRating.jsx';
 import Login from './Login/Login.jsx';
+import { ToastContainer } from 'react-toastify';
+import AddProducts from './Components/AddProducts/AddProducts.jsx';
+import ProductDetails from './Components/ProductDetails/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: 'allProducts',
         Component: AllProducts
+      },
+      {
+        path: 'productDetails/:id',
+        loader: ({params}) => fetch(`http://localhost:4000/products/${params.id}`),
+        Component: ProductDetails
       },
       {
         path: 'login',
@@ -41,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: 'myRating',
         Component: MyRating
+      },
+      {
+        path: 'addProducts',
+        Component: AddProducts
       }
     ]
   }
@@ -50,6 +62,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
     </AuthProvider>
   </StrictMode>,
 )

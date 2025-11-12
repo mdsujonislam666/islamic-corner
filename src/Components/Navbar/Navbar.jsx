@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
 
@@ -8,7 +9,7 @@ const Navbar = () => {
 
     const handleSignOut = () =>{
         signOutUser()
-        .then()
+        .then(toast.success('SignOut Successful'))
         .catch()
     }
 
@@ -47,7 +48,7 @@ const Navbar = () => {
                 {
                     user ?
                         <a onClick={handleSignOut} className="btn">Sign Out</a> :
-                        <Link to="/login" className="btn">Login</Link>
+                        <Link to="/login" className="btn btn-primary">Login</Link>
 
                 }
             </div>

@@ -1,0 +1,198 @@
+[
+    {
+        "property_name": "Al-Quran",
+        "description": "Premium edition of the Holy Quran with color-coded Tajweed and Bangla translation.",
+        "price": 1100,
+        "location": "Bandarban",
+        "category": "Holy Book",
+        "property_image": "https://i.ibb.co/4wn2jk3G/alquran.jpg",
+        "posted_date": "2025-11-06T08:50:00Z",
+        "posted_by": {
+            "name": "Sajid Hasan",
+            "email": "sajid.hasan@example.com",
+            "profile_photo": "https://i.ibb.co/VY9fQ7Vt/p7.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Wall-Canvas",
+        "description": "Elegant Islamic wall canvas featuring Arabic calligraphy and Ayatul Kursi — perfect for your home or office decor.",
+        "price": 3500,
+        "location": "Dhanmondi, Dhaka",
+        "category": "Home Decor",
+        "property_image": "https://i.ibb.co/Jjk6GXMQ/wall-canvas.jpg",
+        "posted_date": "2025-11-05T10:30:00Z",
+        "posted_by": {
+            "name": "Arafat Hossain",
+            "email": "arafat.hossain@example.com",
+            "profile_photo": "https://i.ibb.co/C57wh70t/p12.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Watch",
+        "description": "Smart digital Islamic watch with prayer time reminders, Qibla direction, and Hijri calendar display.",
+        "price": 4500,
+        "location": "Uttara, Dhaka",
+        "category": "Accessories",
+        "property_image": "https://i.ibb.co/3ms65svs/watch.jpg",
+        "posted_date": "2025-10-29T14:15:00Z",
+        "posted_by": {
+            "name": "Nusrat Jahan",
+            "email": "nusrat.jahan@example.com",
+            "profile_photo": "https://i.ibb.co/FLRfvQJ5/prof1.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Lamp",
+        "description": "Beautiful LED Islamic lamp engraved with Quranic verses — adds spiritual light to your room.",
+        "price": 2800,
+        "location": "Mohammadpur, Dhaka",
+        "category": "Home Decor",
+        "property_image": "https://i.ibb.co/1Y2QQC3H/lamp.jpg",
+        "posted_date": "2025-11-01T09:00:00Z",
+        "posted_by": {
+            "name": "Samiul Rahman",
+            "email": "samiul.rahman@example.com",
+            "profile_photo": "https://i.ibb.co/YBPx9K5f/prof2.webp"
+        }
+    },
+    {
+        "property_name": "Sunna Abu Dawud",
+        "description": "The Sunan Abu Dawud collection — authentic Hadith book covering various aspects of Islamic life and Sunnah.",
+        "price": 900,
+        "location": "Gulshan, Dhaka",
+        "category": "Islamic Books",
+        "property_image": "https://i.ibb.co/ZprQZq7z/sunna-Abu-Dawud.jpg",
+        "posted_date": "2025-11-03T16:45:00Z",
+        "posted_by": {
+            "name": "Rumana Akter",
+            "email": "rumana.akter@example.com",
+            "profile_photo": "https://i.ibb.co/7Nyy4hVJ/prof3.jpg"
+        }
+    },
+    {
+        "property_name": "Bukhari-Shorif",
+        "description": "Sahih Al-Bukhari — the most reliable Hadith compilation with easy Bangla translation and commentary.",
+        "price": 1200,
+        "location": "Banani, Dhaka",
+        "category": "Islamic Books",
+        "property_image": "https://i.ibb.co/TqpXPMsq/bukhari-shorif.jpg",
+        "posted_date": "2025-10-30T11:00:00Z",
+        "posted_by": {
+            "name": "Fahim Ahmed",
+            "email": "fahim.ahmed@example.com",
+            "profile_photo": "https://i.ibb.co/4ZGF1fXT/p5.jpg"
+        }
+    },
+    {
+        "property_name": "Fajayel-Amol",
+        "description": "A widely read Islamic book focusing on the virtues of deeds, prayer, and daily good practices.",
+        "price": 600,
+        "location": "Cox's Bazar",
+        "category": "Islamic Books",
+        "property_image": "https://i.ibb.co/bR5rstcd/falyel-amol.webp",
+        "posted_date": "2025-10-25T13:20:00Z",
+        "posted_by": {
+            "name": "Tania Rahman",
+            "email": "tania.rahman@example.com",
+            "profile_photo": "https://i.ibb.co/60mBDXzk/p6.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Girl-Hijab",
+        "description": "Lightweight cotton hijab for girls — elegant, comfortable, and modest for daily wear.",
+        "price": 750,
+        "location": "Motijheel, Dhaka",
+        "category": "Clothing",
+        "property_image": "https://i.ibb.co/JjJjW45F/hijab.webp",
+        "posted_date": "2025-11-02T18:25:00Z",
+        "posted_by": {
+            "name": "Mahmudul Islam",
+            "email": "mahmudul.islam@example.com",
+            "profile_photo": "https://i.ibb.co/sp5PTYfB/p8.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Jainamaj",
+        "description": "Soft and beautifully designed prayer mat (Jainamaj) for peaceful salah experience.",
+        "price": 950,
+        "location": "Manikganj",
+        "category": "Prayer Items",
+        "property_image": "https://i.ibb.co/CKJn7k7j/jainamaj.jpg",
+        "posted_date": "2025-10-28T12:10:00Z",
+        "posted_by": {
+            "name": "Anika Chowdhury",
+            "email": "anika.chowdhury@example.com",
+            "profile_photo": "https://i.ibb.co/z9prL8r/p9.webp"
+        }
+    },
+    {
+        "property_name": "Islamic Miswaak",
+        "description": "Organic miswaak stick made from the Peelu tree — Sunnah for oral hygiene and freshness.",
+        "price": 150,
+        "location": "Bashundhara, Dhaka",
+        "category": "Sunnah Items",
+        "property_image": "https://i.ibb.co/yBn0f6Dv/miswaak.jpg",
+        "posted_date": "2025-11-07T19:40:00Z",
+        "posted_by": {
+            "name": "Mehedi Hasan",
+            "email": "mehedi.hasan@example.com",
+            "profile_photo": "https://i.ibb.co/gZ9D4NJK/p10.webp"
+        }
+    },
+    {
+        "property_name": "Islamic Ator",
+        "description": "Alcohol-free Islamic perfume (Ator) made from natural essential oils — long-lasting fragrance.",
+        "price": 500,
+        "location": "Mirpur, Dhaka",
+        "category": "Fragrance",
+        "property_image": "https://i.ibb.co/v6c2WQMx/ator.jpg",
+        "posted_date": "2025-11-04T11:15:00Z",
+        "posted_by": {
+            "name": "Rafiul Karim",
+            "email": "rafiul.karim@example.com",
+            "profile_photo": "https://i.ibb.co/C3DmGj8j/p11.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Tosbi",
+        "description": "Handcrafted wooden Tasbeeh with 99 smooth beads — perfect for daily zikr and remembrance.",
+        "price": 300,
+        "location": "Khilgaon, Dhaka",
+        "category": "Prayer Items",
+        "property_image": "https://i.ibb.co/rRkzH326/tosbi.jpg",
+        "posted_date": "2025-11-08T09:30:00Z",
+        "posted_by": {
+            "name": "Sabbir Hossain",
+            "email": "sabbir.hossain@example.com",
+            "profile_photo": "https://i.ibb.co/C57wh70t/p12.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Tupi",
+        "description": "Soft cotton Islamic cap (Tupi) — premium quality and ideal for daily prayer use.",
+        "price": 250,
+        "location": "Chittagong",
+        "category": "Clothing",
+        "property_image": "https://i.ibb.co/TDtTx8xx/tupi.webp",
+        "posted_date": "2025-11-09T12:45:00Z",
+        "posted_by": {
+            "name": "Abdullah Al Noman",
+            "email": "abdullah.noman@example.com",
+            "profile_photo": "https://i.ibb.co/vxK7VVRf/p13.jpg"
+        }
+    },
+    {
+        "property_name": "Islamic Jubba",
+        "description": "Traditional Islamic Jubba made from premium fabric, ideal for prayer and daily wear.",
+        "price": 1600,
+        "location": "Dhaka, Bangladesh",
+        "category": "Clothing",
+        "property_image": "https://i.ibb.co/WNJ5XJJN/man-stylized.jpg",
+        "posted_date": "2025-11-09T10:00:00Z",
+        "posted_by": {
+            "name": "Fahim Ahmed",
+            "email": "fahim.ahmed@example.com",
+            "profile_photo": "https://i.ibb.co/G3cxbJ09/p14.png"
+        }
+    }
+    ]
