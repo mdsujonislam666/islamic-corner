@@ -3,6 +3,8 @@ import { AuthContext } from '../Context/AuthContext';
 import { Link } from 'react-router';
 import { toast } from 'react-toastify';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
+import { updateProfile } from 'firebase/auth';
+import { auth } from '../firebase/firebase.init';
 // import { data } from 'react-router';
 
 const Register = () => {
@@ -28,6 +30,16 @@ const Register = () => {
             .then(result => {
                 console.log(result);
                 toast.success('SignUp Successful')
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL:image
+                }).then(() => {
+                    // Profile updated!
+                    // ...
+                }).catch((error) => {
+                    // An error occurred
+                    // ..
+                    console.log(error);
+                });
             })
             .catch(error => {
                 console.log(error);
@@ -40,6 +52,7 @@ const Register = () => {
         signInWithGoogle()
             .then(result => {
                 toast.success('Google SignUP Successful');
+
 
                 const newUser = {
                     name: result.user.displayName,
@@ -88,7 +101,7 @@ const Register = () => {
                     <div className='relative'>
                         <label className="label">Password</label>
                         <input type={show ? "text" : "password"} name="password" className="input" placeholder="Password" />
-                        <span onClick={() => setShow(!show)} className='absolute right-[30px] top-7 cursor-pointer z-50'>{show? <IoEye size={22}/>: <IoEyeOff size={22} />}</span>
+                        <span onClick={() => setShow(!show)} className='absolute right-[30px] top-7 cursor-pointer z-50'>{show ? <IoEye size={22} /> : <IoEyeOff size={22} />}</span>
                         <button className="btn btn-neutral mt-4 w-full">Register</button>
                     </div>
 

@@ -15,6 +15,8 @@ import Login from './Login/Login.jsx';
 import { ToastContainer } from 'react-toastify';
 import AddProducts from './Components/AddProducts/AddProducts.jsx';
 import ProductDetails from './Components/ProductDetails/ProductDetails.jsx';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
+import UpdateProduct from './Components/UpdateProduct/UpdateProduct.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +29,22 @@ const router = createBrowserRouter([
       },
       {
         path: 'allProducts',
-        Component: AllProducts
+        Component: AllProducts,
+        loader: () => fetch('http://localhost:4000/allProducts')
       },
       {
         path: 'productDetails/:id',
         loader: ({params}) => fetch(`http://localhost:4000/products/${params.id}`),
         Component: ProductDetails
+      },
+      {
+        path: "updateProduct/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
+        loader: ({params}) => fetch(`http://localhost:4000/products/${params.id}`)
       },
       {
         path: 'login',
@@ -51,7 +63,7 @@ const router = createBrowserRouter([
         Component: MyRating
       },
       {
-        path: 'addProducts',
+        path: 'addProduct',
         Component: AddProducts
       }
     ]
