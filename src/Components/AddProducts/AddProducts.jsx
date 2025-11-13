@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
+import { toast } from 'react-toastify';
 
 const AddProducts = () => {
 
@@ -34,6 +35,7 @@ const AddProducts = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            toast.success("Successfully Add Product");
         })
         .catch(error => {
             console.log(error);

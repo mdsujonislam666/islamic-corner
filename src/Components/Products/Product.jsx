@@ -18,7 +18,7 @@ const Product = ({ product }) => {
                     <p className='text-gray-600'>{description}</p>
                     <h1 className='font-bold flex items-center '>BTD: <span className='text-red-500'><FaBangladeshiTakaSign size={15} /></span><span className='text-blue-600'>{price}</span></h1>
                     <div className='flex justify-between'>
-                        <h3 className='font-bold text-indigo-600'>{category}</h3>
+                        <h3 className='font-bold text-indigo-600 px-5 py-1 bg-amber-300 rounded-xl'>{category}</h3>
                         <h2 className='text-lime-600'>{location}</h2>
                     </div>
                     <div className="card-actions">
