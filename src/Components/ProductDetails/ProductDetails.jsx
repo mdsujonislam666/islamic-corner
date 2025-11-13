@@ -38,6 +38,18 @@ const ProductDetails = () => {
                     </div>
 
                 </div>
+                <div>
+                    <h1>How was your experience</h1>
+                    <input type="text" />
+                    <select name="" id="" className='w-20'>
+                        <option value="">Select your rating</option>
+                        <option value="">1 star</option>
+                        <option value="">2 star</option>
+                        <option value="">3 star</option>
+                        <option value="">4 star</option>
+                        <option value="">5 star</option>
+                    </select>
+                </div>
                 <div className='card-body items-center p-5 m-5 mb-5 bg-amber-200 rounded-xl'>
                     <h1 className='text-2xl font-bold'>Posted By</h1>
                     <div>

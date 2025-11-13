@@ -1,5 +1,5 @@
 
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 
 
@@ -7,7 +7,7 @@ const UpdateProduct = () => {
     const product = useLoaderData();
     console.log(product._id);
     
-
+    const navigate = useNavigate()
 
     const handleUpdateProduct = (e) => {
         e.preventDefault();
@@ -31,6 +31,7 @@ const UpdateProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                navigate(`/productDetails/${product._id}`)
                 toast.success('Successfully Update');
             })
             .catch(error => {

@@ -1,15 +1,11 @@
 import React from 'react';
-// import LatestProducts from '../LatestProducts/LatestProducts';
-// import AllProduct from '../allProduct/allProduct';
 import { useLoaderData } from 'react-router';
 import Product from '../Products/Product';
 
-// const allProductsPromise = fetch('http://localhost:4000/allProducts')
-//     .then(res => res.json());
 
 const AllProducts = () => {
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
     return (
 
         <div>

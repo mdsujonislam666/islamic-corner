@@ -53,6 +53,13 @@ const AuthProvider = ({children}) => {
         user,
         loading,
     }
+    if(loading){
+        return(
+        <div className='flex justify-center items-center text-center'>
+            <span className="loading loading-bars loading-xl"></span>
+        </div> 
+        )
+    }
     return (
         <AuthContext value={authInfo}>
             {children}

@@ -1,16 +1,24 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import { toast } from 'react-toastify';
+import { FaUser } from 'react-icons/fa6';
 
 const Navbar = () => {
 
     const { user, signOutUser } = use(AuthContext);
+    console.log(user);
+    const navigate = useNavigate();
 
     const handleSignOut = () =>{
         signOutUser()
-        .then(toast.success('SignOut Successful'))
-        .catch()
+        .then(data => {
+            console.log(data);
+            navigate('/login');
+            toast.success('SignOut Successful')
+        
+    })
+        .catch(error => console.log(error))
     }
 
     const links = <>
@@ -48,7 +56,31 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <a onClick={handleSignOut} className="btn">Sign Out</a> :
+                        <div className='flex gap-5'>
+                            <div>
+                                <a onClick={handleSignOut} className="btn btn-primary">Sign Out</a>
+                            </div>
+                            <div  className='dropdown dropdown-end z-50 '>
+                                <div tabIndex={0} role='button' className='btn btn-ghost btn-circle avatar'>
+                                    <div className='w-20 rounded-full border-2 border-gray-200 '>
+                                        <img alt="Tailwind css navbar component" referrerPolicy='no-referrer' src={user.photoURL || "https://i.ibb.co/tMCRQ5Gk/tanzid.jpg"} />
+                                    </div>
+                                </div>
+                                <ul tabIndex={-1} className='menu menu-sm dropdown-content bg-amber-400 '>
+                                    <div>
+                                        <li className='text-sm font-bold'>Name: {user.displayName
+}</li>
+                                        <li className='text-xs'>Email: {user.email}</li>
+                                    </div>
+                                    <li>
+                                        <Link><FaUser></FaUser>Profile</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+
+                         :
                         <Link to="/login" className="btn btn-primary">Login</Link>
 
                 }

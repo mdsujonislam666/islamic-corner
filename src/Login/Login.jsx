@@ -1,5 +1,5 @@
 import React, { use, useRef, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
@@ -8,6 +8,7 @@ const Login = () => {
     const { signInWithGoogle, signInUser, resetPassword } = use(AuthContext);
     const emailRef = useRef(null);
     const [show, setShow] = useState(false);
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -26,6 +27,7 @@ const Login = () => {
             .then(result => {
                 console.log(result);
                 toast.success('SignIn Successful');
+                navigate('/')
             })
             .catch(error => {
                 toast.error(error)

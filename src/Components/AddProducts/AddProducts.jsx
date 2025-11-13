@@ -1,11 +1,14 @@
 import React, { use } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 
 const AddProducts = () => {
 
     const {user} = use(AuthContext);
     // console.log(user);
+
+    const navigate = useNavigate();
 
     const handleAddProduct = (e) =>{
         e.preventDefault();
@@ -36,6 +39,7 @@ const AddProducts = () => {
         .then(data => {
             console.log(data);
             toast.success("Successfully Add Product");
+            navigate('/')
         })
         .catch(error => {
             console.log(error);
