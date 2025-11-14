@@ -18,17 +18,8 @@ const Product = ({ product }) => {
                     <p className='text-gray-600'>{description}</p>
                     <h1 className='font-bold flex items-center '>BTD: <span className='text-red-500'><FaBangladeshiTakaSign size={15} /></span><span className='text-blue-600'>{price}</span></h1>
                     <div className='flex justify-between'>
-                        <h3 className='font-bold text-indigo-600 px-5 py-1 bg-amber-300 rounded-xl'>{category}</h3>
+                        <h3 className='font-bold cursor-pointer text-indigo-600 px-5 py-1 bg-amber-300 rounded-xl'>{category}</h3>
                         <h2 className='text-lime-600'>{location}</h2>
-                    </div>
-                    <div>
-                        <div className="rating">
-                            <input type="radio" name="rating-1" className="mask mask-star" aria-label="1 star" />
-                            <input type="radio" name="rating-1" className="mask mask-star" aria-label="2 star" defaultChecked />
-                            <input type="radio" name="rating-1" className="mask mask-star" aria-label="3 star" />
-                            <input type="radio" name="rating-1" className="mask mask-star" aria-label="4 star" />
-                            <input type="radio" name="rating-1" className="mask mask-star" aria-label="5 star" />
-                        </div>
                     </div>
                     <div className="card-actions">
                         <Link to={`/productDetails/${_id}`} className="btn btn-primary w-full">View Details</Link>

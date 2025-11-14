@@ -17,6 +17,8 @@ import AddProducts from './Components/AddProducts/AddProducts.jsx';
 import ProductDetails from './Components/ProductDetails/ProductDetails.jsx';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import UpdateProduct from './Components/UpdateProduct/UpdateProduct.jsx';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const router = createBrowserRouter([
   {

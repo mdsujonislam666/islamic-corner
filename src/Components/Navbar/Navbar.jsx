@@ -3,6 +3,10 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa6';
+import MyLink from './MyLink';
+import { IoHome } from 'react-icons/io5';
+import { BsFillCartCheckFill, BsMortarboardFill } from 'react-icons/bs';
+import { FcApproval, FcHome, FcInvite } from 'react-icons/fc';
 
 const Navbar = () => {
 
@@ -10,25 +14,25 @@ const Navbar = () => {
     console.log(user);
     const navigate = useNavigate();
 
-    const handleSignOut = () =>{
+    const handleSignOut = () => {
         signOutUser()
-        .then(data => {
-            console.log(data);
-            navigate('/login');
-            toast.success('SignOut Successful')
-        
-    })
-        .catch(error => console.log(error))
+            .then(data => {
+                console.log(data);
+                navigate('/login');
+                toast.success('SignOut Successful')
+
+            })
+            .catch(error => console.log(error))
     }
 
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/allProducts">All Products</NavLink></li>
+        <li><MyLink to="/"><FcHome />Home</MyLink></li>
+        <li><MyLink to="/allProducts"><BsFillCartCheckFill />All Products</MyLink></li>
         {
             user && <>
-                <li><NavLink to="/myProducts">My Products</NavLink></li>
-                <li><NavLink to="/myRating">My Rating</NavLink></li>
-                <li><NavLink to="/addProduct">Add Product</NavLink></li>
+                <li><MyLink to="/myProducts"><BsMortarboardFill />My Products</MyLink></li>
+                <li><MyLink to="/myRating"><FcApproval />My Rating</MyLink></li>
+                <li><MyLink to="/addProduct"><FcInvite />Add Product</MyLink></li>
             </>
         }
     </>
@@ -57,30 +61,28 @@ const Navbar = () => {
                 {
                     user ?
                         <div className='flex gap-5'>
-                            <div>
-                                <a onClick={handleSignOut} className="btn btn-primary">Sign Out</a>
-                            </div>
-                            <div  className='dropdown dropdown-end z-50 '>
+
+                            <div className='dropdown dropdown-end z-50 '>
                                 <div tabIndex={0} role='button' className='btn btn-ghost btn-circle avatar'>
                                     <div className='w-20 rounded-full border-2 border-gray-200 '>
                                         <img alt="Tailwind css navbar component" referrerPolicy='no-referrer' src={user.photoURL || "https://i.ibb.co/tMCRQ5Gk/tanzid.jpg"} />
                                     </div>
                                 </div>
-                                <ul tabIndex={-1} className='menu menu-sm dropdown-content bg-amber-400 '>
-                                    <div>
-                                        <li className='text-sm font-bold'>Name: {user.displayName
-}</li>
-                                        <li className='text-xs'>Email: {user.email}</li>
+                                <ul tabIndex={-1} className='menu menu-sm dropdown-content bg-amber-400 w-[200px] space-y-3 rounded-xl'>
+                                    <div className='space-y-3'>
+                                        <li className='text-sm font-bold bg-white py-2 px-3 rounded-xl'>Name: {user.displayName
+                                        }</li>
+                                        <li className='text-xs bg-white py-2 rounded-xl'>Email: {user.email}</li>
                                     </div>
-                                    <li>
-                                        <Link><FaUser></FaUser>Profile</Link>
-                                    </li>
+                                    <div>
+                                        <a onClick={handleSignOut} className="btn btn-primary w-full">Sign Out</a>
+                                    </div>
                                 </ul>
                             </div>
-                            
+
                         </div>
 
-                         :
+                        :
                         <Link to="/login" className="btn btn-primary">Login</Link>
 
                 }
