@@ -22,6 +22,9 @@ const ProductDetails = () => {
         console.log(rating, description);
 
         const formData = {
+            productName: product.property_name,
+            category:product.category,
+            property_image:product.property_image,
             rating: e.target.rating.value,
             reviewText: e.target.description.value,
             posted_date: new Date(),
