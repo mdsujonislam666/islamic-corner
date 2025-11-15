@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import { toast } from 'react-toastify';
@@ -13,6 +13,18 @@ const Navbar = () => {
     const { user, signOutUser } = use(AuthContext);
     console.log(user);
     const navigate = useNavigate();
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || "light")
+
+    useEffect(() =>{
+        const html = document.querySelector('html')
+        html.setAttribute("data-theme", theme)
+        localStorage.setItem("theme", theme)
+    },[theme])
+
+    const handleTheme = (checked) =>{
+        setTheme(checked? "dark": "light")
+    }
 
     const handleSignOut = () => {
         signOutUser()
@@ -57,7 +69,11 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
+
             <div className="navbar-end">
+                <div>
+                    <input onChange={(e) => handleTheme(e.target.checked)} type="checkbox" defaultChecked={localStorage.getItem('theme') === "dark"} className='toggle'/>
+                </div>
                 {
                     user ?
                         <div className='flex gap-5'>
