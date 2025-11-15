@@ -3,11 +3,12 @@ import { FaBangladeshiTakaSign, FaStar } from 'react-icons/fa6';
 import { Link, Navigate, useLoaderData, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/AuthContext';
+import Swal from 'sweetalert2';
 
 const ProductDetails = () => {
     const product = useLoaderData();
     const ratingModal = useRef(null);
-    const {user} = use(AuthContext);
+    const { user } = use(AuthContext);
 
     const navigate = useNavigate();
 
@@ -23,8 +24,8 @@ const ProductDetails = () => {
 
         const formData = {
             productName: product.property_name,
-            category:product.category,
-            property_image:product.property_image,
+            category: product.category,
+            property_image: product.property_image,
             rating: e.target.rating.value,
             reviewText: e.target.description.value,
             posted_date: new Date(),
@@ -51,6 +52,43 @@ const ProductDetails = () => {
             .catch(error => {
                 console.log(error);
             })
+    }
+
+    const handleDeleteProduct = () => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:4000/products/${product._id}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-type": "application/json",
+                    },
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+                        toast.success("Successfully Delete Product");
+                        navigate('/')
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+
+            }
+        });
     }
 
     console.log(product);
@@ -80,6 +118,7 @@ const ProductDetails = () => {
                         </div>
                         <div className="card-actions">
                             <Link to={`/updateProduct/${_id}`} className="btn btn-primary w-full">Update Product</Link>
+                            <button onClick={handleDeleteProduct} to={`/updateProduct/${_id}`} className="btn btn-primary w-full">Delete Product</button>
                         </div>
                     </div>
 
