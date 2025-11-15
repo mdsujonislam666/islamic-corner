@@ -23,7 +23,7 @@ const MyRating = () => {
         return <div>loading.....</div>
     }
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto ">
             <table className="table">
                 {/* head */}
                 <thead>
@@ -43,7 +43,7 @@ const MyRating = () => {
                     {/* row 1 */}
                     {
                         rating.map((product,index) =>
-                            <Rating key={product._id} product={[product]} index={index}></Rating>
+                            <Rating key={product._id} product={[product]} index={index} ></Rating>
                         )
                     }
 

@@ -10,7 +10,8 @@ const Rating = ({ product }) => {
 
         product.map((item) => {
             return (
-                <tr>
+                
+                <tr className='bg-sky-500/100 my-5'>
                     <th>
                         <FaStar />
                     </th>
@@ -53,7 +54,8 @@ const Rating = ({ product }) => {
                     <th>
                         <div className="btn btn-primary btn-xs">Delete</div>
                     </th>
-                </tr>);
+                </tr>
+                );
         })
     );
 };

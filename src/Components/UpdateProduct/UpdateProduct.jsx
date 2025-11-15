@@ -40,7 +40,7 @@ const UpdateProduct = () => {
     }
 
     return (
-        <div className="card bg-base-100  max-w-sm shrink-0 shadow-2xl mt-10 mx-auto">
+        <div className="card bg-base-100  max-w-sm shrink-0 shadow-2xl mt-10 mx-auto ">
             <form onSubmit={handleUpdateProduct} className="card-body">
                 <h1 className='mx-auto text-3xl font-bold py-5'>Update Product</h1>
                 <fieldset className="fieldset space-y-2">

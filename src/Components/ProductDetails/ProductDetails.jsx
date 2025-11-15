@@ -57,24 +57,24 @@ const ProductDetails = () => {
     const { _id, property_name, category, description, location, property_image, price, posted_by } = product;
     return (
         <div>
-            <div className='max-w-3xl mx-auto bg-blue-100'>
+            <div className='max-w-3xl mx-auto bg-blue-100 inset-shadow-sm inset-shadow-indigo-500/50 bg-gradient-to-r from-indigo-500 via-sky-300 to-violet-500'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
                     <div>
                         <figure className="p-5">
                             <img
                                 src={property_image}
                                 alt="Shoes"
-                                className="rounded-xl w-full h-66" />
+                                className="rounded-xl w-full h-66 hover:scale-105" />
                         </figure>
                     </div>
                     <div className="card-body space-y-3">
                         <h2 className="card-title text-2xl font-bold">{property_name}</h2>
-                        <div className='bg-white px-2 py-3 rounded-xl shadow-xl'>
-                            <p className='text-gray-600'>{description}</p>
+                        <div className='bg-white px-2 py-3 rounded-xl shadow-lg shadow-white-500/50'>
+                            <p className='text-gray-600 '>{description}</p>
                         </div>
 
                         <h1 className='font-bold flex items-center '>BTD: <span className='text-red-500'><FaBangladeshiTakaSign size={15} /></span><span className='text-blue-600'>{price}</span></h1>
-                        <div className='flex justify-between bg-white py-3 rounded-xl px-2 shadow-2xl'>
+                        <div className='flex justify-between bg-white py-3 rounded-xl px-2 shadow-lg shadow-white-500/50'>
                             <h3 className='font-bold text-indigo-600'>{category}</h3>
                             <h2 className='text-lime-600'>{location}</h2>
                         </div>
@@ -90,7 +90,7 @@ const ProductDetails = () => {
                         <Link onClick={handleRatingModal} className="btn btn-primary w-full">Give Your Rating</Link>
                     </div>
                     <dialog ref={ratingModal} className="modal modal-bottom sm:modal-middle">
-                        <div className="modal-box">
+                        <div className="modal-box inset-shadow-sm inset-shadow-indigo-500/50 hover:scale-105 bg-gradient-to-r from-indigo-500 via-sky-300 to-violet-500">
                             <h3 className="font-bold text-lg">Give Your Rating!</h3>
                             <p className="py-4 text-xl font-bold">Please Say Something! How Was Your Experience</p>
 

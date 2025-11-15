@@ -7,7 +7,7 @@ const LatestProducts = ({ latestProductsPromise }) => {
     console.log(products);
     return (
         <div>
-            <h2 className='text-5xl font-bold text-center py-10'>Recent <span className='text-primary'>Product</span></h2>
+            <h2 className='text-5xl font-bold text-center py-10'>Recent <span className='text-red-600'>Product</span></h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     products.map(product =>
