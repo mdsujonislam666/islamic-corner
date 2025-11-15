@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa6';
 import MyLink from './MyLink';
 import { IoHome } from 'react-icons/io5';
-import { BsFillCartCheckFill, BsMortarboardFill } from 'react-icons/bs';
+import { BsFillCartCheckFill, BsMoonStars, BsMortarboardFill } from 'react-icons/bs';
 import { FcApproval, FcHome, FcInvite } from 'react-icons/fc';
 
 const Navbar = () => {
@@ -50,7 +50,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar  shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,7 +62,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Islamic <span className='text-red-500'>Corner</span></a>
+                <a className="btn btn-ghost text-xl"><BsMoonStars />Islamic <span className='text-red-500'>Corner</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -70,7 +70,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="navbar-end">
+            <div className="navbar-end flex gap-5">
                 <div>
                     <input onChange={(e) => handleTheme(e.target.checked)} type="checkbox" defaultChecked={localStorage.getItem('theme') === "dark"} className='toggle'/>
                 </div>

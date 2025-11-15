@@ -48,7 +48,7 @@ const AddProducts = () => {
 
     return (
 
-        <div className="card bg-base-100  max-w-sm shrink-0 shadow-2xl mt-10 mx-auto">
+        <div className="card bg-base-100  max-w-sm shrink-0 shadow-2xl mt-10 mx-auto bg-gradient-to-r from-indigo-500 via-sky-300 to-violet-500">
             <form onSubmit={handleAddProduct} className="card-body">
                 <h1 className='mx-auto text-3xl font-bold py-5'>Add Product</h1>
                 <fieldset className="fieldset space-y-2">

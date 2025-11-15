@@ -13,7 +13,7 @@
 }
 
 .btn-primary{
-  @apply bg-gradient-to-r from-[#632EE3] to-[#9F62F2] border-none text-white
+  @apply bg-gradient-to-r from-fuchsia-400 via-orange-200 to-fuchsia-400 border-amber-100 text-white
 }
 .btn-primary:hover{
   @apply opacity-90;

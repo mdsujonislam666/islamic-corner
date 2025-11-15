@@ -19,6 +19,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import UpdateProduct from './Components/UpdateProduct/UpdateProduct.jsx';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ErrorPage from './Components/Page/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'productDetails/:id',
-        loader: ({params}) => fetch(`http://localhost:4000/products/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:4000/products/${params.id}`),
         element: (
           <PrivateRoute>
             <ProductDetails></ProductDetails>
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
             <UpdateProduct></UpdateProduct>
           </PrivateRoute>
         ),
-        loader: ({params}) => fetch(`http://localhost:4000/products/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:4000/products/${params.id}`)
       },
       {
         path: 'login',
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'register',
-        Component:Register
+        Component: Register
       },
       {
         path: 'myProducts',
@@ -73,7 +74,11 @@ const router = createBrowserRouter([
         Component: AddProducts
       }
     ]
-  }
+  },
+  {
+    path: "/*",
+    Component: ErrorPage
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(

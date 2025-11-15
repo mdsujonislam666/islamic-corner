@@ -7,7 +7,11 @@ const LatestProducts = ({ latestProductsPromise }) => {
     console.log(products);
     return (
         <div>
-            <h2 className='text-5xl font-bold text-center py-10'>Recent <span className='text-red-600'>Product</span></h2>
+            <div className='py-10 space-y-5'>
+                <h2 className='text-5xl font-bold text-center'>Recent <span className='text-red-600'>Product</span></h2>
+                <p className='text-center font-bold text-2xl'>Follow the Sunnah in daily life — let it begin with a beautiful Islamic product</p>
+            </div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     products.map(product =>
@@ -15,7 +19,7 @@ const LatestProducts = ({ latestProductsPromise }) => {
                     )
                 }
             </div>
-            <div className='items-center text-center pb-10'>
+            <div className='items-center text-center py-10'>
                 <Link to="/allProducts"><button className='btn btn-primary w-40'>View All</button></Link>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { use, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
@@ -21,6 +21,7 @@ const Login = () => {
             toast.error(
                 "Password must be at lest 8 character long and include at least one uppercase letter, one lowercase letter, one number, and one special character"
             )
+            return;
         }
 
         signInUser(email, password)
@@ -30,7 +31,7 @@ const Login = () => {
                 navigate('/')
             })
             .catch(error => {
-                toast.error(error)
+                toast.error(error.message);
             })
     }
 
@@ -42,9 +43,10 @@ const Login = () => {
         resetPassword(email)
             .then(result => {
                 console.log(result);
+                toast.success("Check your email to reset password");
             })
             .catch(error => {
-                console.log(error.massage);
+                toast.error(error.message);
             })
     }
 
@@ -55,8 +57,7 @@ const Login = () => {
                 toast.success('Google Login Successful');
             })
             .catch(error => {
-                console.log(error);
-                toast.error(error);
+                toast.error(error.message);
             })
     }
 
@@ -75,7 +76,7 @@ const Login = () => {
                         <span onClick={() => setShow(!show)} className='absolute right-[30px] top-7 cursor-pointer z-50'>{show ? <IoEye size={22} /> : <IoEyeOff size={22} />}</span>
                     </div>
 
-                    <div><button type='button' onClick={resetEmailPassword} className="cursor-pointer hover:underline">Forgot password?</button></div>
+                    <div><button type='button' onClick={resetEmailPassword} className="cursor-pointer hover:underline font-bold">Forgot password?</button></div>
 
                     <button className="btn btn-neutral mt-4">Login</button>
 
