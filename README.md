@@ -1,16 +1,15 @@
-# React + Vite
+Website Name: Islamic Corner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+live site URL:http://localhost:5173/
 
-Currently, two official plugins are available:
+**আমাদের এই ওয়েবসাইট থেকে কোনো ক্লায়েন্ট খুবই সহজে তার পছন্দের ইসলামিক প্রোডাক্টগুলো কিনতে পারবে এবং তার দ্বীনের পথে চলা আরও সহজ হবে।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- আমাদের ওয়েবসাইটে একজন ক্লায়েন্ট তার ইমেইল ও পাসওয়ার্ড ব্যবহার করে লগইন করতে পারবে, এবং লগইন করার পরই প্রোডাক্ট কেনার অনুমতি পাবে। লগইন না করলে ক্লায়েন্ট তার পছন্দের প্রোডাক্ট কিনতে পারবে না।
 
-## React Compiler
+- আমাদের ওয়েবসাইটে প্রোডাক্ট যোগ করা যায় এবং প্রয়োজন হলে প্রোডাক্ট ডিলিটও করা যায়।
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- আমাদের ওয়েবসাইটে কোনো ক্লায়েন্ট তার পছন্দের প্রোডাক্টে রেটিং দিতে পারবে এবং দেওয়া রেটিং নিজেও দেখতে পারবে।
 
-## Expanding the ESLint configuration
+- আমাদের ওয়েবসাইটে কোনো ক্লায়েন্ট তার পছন্দমতো প্রোডাক্ট আপডেটও করতে পারবে।
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- আমাদের ওয়েবসাইটে রেজিস্টার করা ইউজার তার পাসওয়ার্ড ভুলে গেলে সহজেই পাসওয়ার্ড পরিবর্তন করতে পারবে।
