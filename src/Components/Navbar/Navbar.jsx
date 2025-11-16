@@ -86,9 +86,9 @@ const Navbar = () => {
                                 </div>
                                 <ul tabIndex={-1} className='menu menu-sm dropdown-content bg-amber-400 w-[200px] space-y-3 rounded-xl'>
                                     <div className='space-y-3'>
-                                        <li className='text-sm font-bold bg-white py-2 px-3 rounded-xl'>Name: {user.displayName
+                                        <li className='text-sm font-bold bg-blue-500 py-2 px-3 rounded-xl'>Name: {user.displayName
                                         }</li>
-                                        <li className='text-xs bg-white py-2 rounded-xl'>Email: {user.email}</li>
+                                        <li className='text-xs bg-blue-500 py-2 rounded-xl'>Email: {user.email}</li>
                                     </div>
                                     <div>
                                         <a onClick={handleSignOut} className="btn btn-primary w-full">Sign Out</a>

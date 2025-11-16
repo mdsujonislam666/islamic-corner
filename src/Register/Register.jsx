@@ -39,6 +39,7 @@ const Register = () => {
                     // An error occurred
                     // ..
                     console.log(error);
+                    toast.error(error);
                 });
             })
             .catch(error => {
