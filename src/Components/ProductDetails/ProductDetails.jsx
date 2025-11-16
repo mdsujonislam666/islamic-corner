@@ -46,7 +46,7 @@ const ProductDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                toast.success("Successfully Add Product");
+                toast.success("Thank you for your Rating");
                 navigate('/')
             })
             .catch(error => {

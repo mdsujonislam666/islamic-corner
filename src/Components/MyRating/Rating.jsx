@@ -51,9 +51,6 @@ const Rating = ({ product }) => {
                         </div>
 
                     </div>
-                    <th>
-                        <div className="btn btn-primary w-full btn-xs">Delete</div>
-                    </th>
                 </tr>
                 );
         })

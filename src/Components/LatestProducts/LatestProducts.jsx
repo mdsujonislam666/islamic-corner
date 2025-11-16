@@ -1,10 +1,20 @@
-import React, { use } from 'react';
+import React, { useEffect, useState } from 'react';
 import Product from '../Products/Product';
 import { Link } from 'react-router';
 
-const LatestProducts = ({ latestProductsPromise }) => {
-    const products = use(latestProductsPromise);
-    console.log(products);
+const LatestProducts = () => {
+    // const products = use(latestProductsPromise);
+    const [deleted, setDeleted] = useState([]);
+
+    useEffect(() =>{
+        const navigat =() =>{
+            fetch(`http://localhost:4000/latest-products`)
+            .then(res => res.json())
+            .then(data => setDeleted(data))
+        }
+        navigat();
+    },[])
+    // console.log(products);
     return (
         <div>
             <div className='py-10 space-y-5'>
@@ -14,7 +24,7 @@ const LatestProducts = ({ latestProductsPromise }) => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
-                    products.map(product =>
+                    deleted.map(product =>
                         <Product key={product._id} product={product}></Product>
                     )
                 }

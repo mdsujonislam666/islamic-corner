@@ -36,7 +36,6 @@ const MyRating = () => {
                         <th>Star Rating</th>
                         <th>Review Date</th>
                         <th>Thumbnail of Property</th>
-                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
