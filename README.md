@@ -1,6 +1,6 @@
 Website Name: Islamic Corner
 
-live site URL:http://localhost:5173/
+live site URL:[http://localhost:5173/](https://incomparable-cannoli-db65ba.netlify.app/)
 
 **আমাদের এই ওয়েবসাইট থেকে কোনো ক্লায়েন্ট খুবই সহজে তার পছন্দের ইসলামিক প্রোডাক্টগুলো কিনতে পারবে এবং তার দ্বীনের পথে চলা আরও সহজ হবে।
 
