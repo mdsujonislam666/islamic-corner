@@ -8,7 +8,7 @@ const MyProducts = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch(`http://localhost:4000/myProducts?email=${user?.email}`)
+        fetch(`${process.env.backendURL}/myProducts?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

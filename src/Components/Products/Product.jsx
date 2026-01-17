@@ -15,7 +15,7 @@ const Product = ({ product }) => {
                 </figure>
                 <div className="card-body space-y-3">
                     <h2 className="card-title text-2xl font-bold">{property_name}</h2>
-                    <p className='text-black'>{description}</p>
+                    <p className='text-black line-clamp-3'>{description}</p>
                     <h1 className='font-bold flex items-center '>BTD: <span className='text-red-500'><FaBangladeshiTakaSign size={15} /></span><span className='text-white'>{price}</span></h1>
                     <div className='flex justify-between'>
                         <h3 className='font-bold cursor-pointer text-indigo-600 px-5 py-1 bg-amber-300 rounded-xl'>{category}</h3>

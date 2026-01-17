@@ -33,11 +33,11 @@ const router = createBrowserRouter([
       {
         path: 'allProducts',
         Component: AllProducts,
-        loader: () => fetch('http://localhost:4000/allProducts')
+        loader: () => fetch(`${process.env.backendURL}/allProducts`)
       },
       {
         path: 'productDetails/:id',
-        loader: ({ params }) => fetch(`http://localhost:4000/products/${params.id}`),
+        loader: ({ params }) => fetch(`${process.env.backendURL}/products/${params.id}`),
         element: (
           <PrivateRoute>
             <ProductDetails></ProductDetails>
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             <UpdateProduct></UpdateProduct>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:4000/products/${params.id}`)
+        loader: ({ params }) => fetch(`${process.env.backendURL}/products/${params.id}`)
       },
       {
         path: 'login',

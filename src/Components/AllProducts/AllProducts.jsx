@@ -16,11 +16,11 @@ const AllProducts = () => {
         console.log(search);
         setLoading(true)
 
-        fetch(`http://localhost:4000/search?search=${search}`)
+        fetch(`${process.env.backendURL}/search?search=${encodeURIComponent(search)}`)
         .then(res => res.json())
         .then(data =>{
             console.log(data);
-            setSearchProduct(data)
+            setSearchProduct(Array.isArray(data)? data:[])
             setLoading(false);
         })
     }
@@ -52,12 +52,13 @@ const AllProducts = () => {
                 <button className='btn btn-primary rounded-full'>Search</button>
             </form>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                {
-                    searchProduct.map(product =>
-                        <Product key={product._id} product={product}></Product>
-                    )
-                }
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
+                 {
+                    Array.isArray(searchProduct) &&
+                    searchProduct.map(product => (
+                        <Product key={product._id} product={product} />
+                    ))
+    }
             </div>
         </div>
     );

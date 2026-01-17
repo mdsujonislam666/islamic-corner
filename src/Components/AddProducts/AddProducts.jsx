@@ -28,7 +28,7 @@ const AddProducts = () => {
             }
         }
         
-        fetch('http://localhost:4000/products',{
+        fetch(`${process.env.backendURL}/products`,{
             method: "POST",
             headers: {
                 "Content-type" : "application/json",

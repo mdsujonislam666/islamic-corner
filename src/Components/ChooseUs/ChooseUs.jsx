@@ -17,7 +17,7 @@ const ChooseUs = () => {
                 <div className='grid lg:grid-cols-2 grid-cols-1'>
                     <div className='mx-auto w-[250px] h-[200px] text-center bg-amber-200 p-5 lg:border-b-2 lg:border-r-2 border-r-gray-700 border-b-gray-700'>
                         <img className='w-24 mx-auto' src={services} alt="" />
-                        <ul className='font-bold'>
+                        <ul className='font-bold text-black'>
                             <li>Home Delivery</li>
                             <li>Live chat support</li>
                             <li>Pickup point</li>
@@ -31,7 +31,7 @@ const ChooseUs = () => {
                     </div>
                     <div className='mx-auto w-[250px] h-[200px] text-center bg-amber-200 p-5 lg:border-t-2 lg:border-l-2 border-l-gray-700 border-t-gray-700'>
                         <img className='w-30 mx-auto' src={customer} alt="" />
-                        <ul className='font-bold'>
+                        <ul className='font-bold text-black'>
                             <li>24/7 hours service</li>
                             <li>Handling Complaints</li>
                             <li>Giving Order Updates</li>

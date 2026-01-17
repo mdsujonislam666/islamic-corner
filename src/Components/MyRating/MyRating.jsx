@@ -11,7 +11,7 @@ const MyRating = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch(`http://localhost:4000/myRating?email=${user?.email}`)
+        fetch(`${process.env.backendURL}/myRating?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

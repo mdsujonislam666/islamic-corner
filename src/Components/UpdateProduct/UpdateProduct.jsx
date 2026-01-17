@@ -21,7 +21,7 @@ const UpdateProduct = () => {
             property_image: e.target.image.value,
         }
 
-        fetch(`http://localhost:4000/products/${product._id}`, {
+        fetch(`${process.env.backendURL}/products/${product._id}`, {
             method: "PUT",
             headers: {
                 "Content-type": "application/json",

@@ -62,7 +62,7 @@ const Register = () => {
                 }
 
                 // create user in the database
-                fetch('http://localhost:4000/users', {
+                fetch(`${process.env.backendURL}/users`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

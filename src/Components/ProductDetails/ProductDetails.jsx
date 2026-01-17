@@ -36,7 +36,7 @@ const ProductDetails = () => {
             }
         }
 
-        fetch('http://localhost:4000/users', {
+        fetch(`${process.env.backendURL}/users`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -66,7 +66,7 @@ const ProductDetails = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:4000/products/${product._id}`, {
+                fetch(`${process.env.backendURL}/products/${product._id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-type": "application/json",

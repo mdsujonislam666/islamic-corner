@@ -8,7 +8,7 @@ const LatestProducts = () => {
 
     useEffect(() =>{
         const navigat =() =>{
-            fetch(`http://localhost:4000/latest-products`)
+            fetch(`${process.env.backendURL}/latest-products`)
             .then(res => res.json())
             .then(data => setDeleted(data))
         }
@@ -22,7 +22,7 @@ const LatestProducts = () => {
                 <p className='text-center font-bold text-2xl'>Follow the Sunnah in daily life — let it begin with a beautiful Islamic product</p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                 {
                     deleted.map(product =>
                         <Product key={product._id} product={product}></Product>
