@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 
 const AllProducts = () => {
+    console.log(import.meta.env.VITE_BACKEND_URL);
+    
     const data = useLoaderData();
     // console.log(data);
     const [searchProduct, setSearchProduct] = useState(data);
@@ -16,7 +18,7 @@ const AllProducts = () => {
         console.log(search);
         setLoading(true)
 
-        fetch(`${process.env.backendURL}/search?search=${encodeURIComponent(search)}`)
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/search?search=${encodeURIComponent(search)}`)
         .then(res => res.json())
         .then(data =>{
             console.log(data);

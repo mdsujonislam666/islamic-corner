@@ -40,11 +40,11 @@ const Navbar = () => {
     const links = <>
         <li><MyLink to="/"><FcHome />Home</MyLink></li>
         <li><MyLink to="/allProducts"><BsFillCartCheckFill />All Products</MyLink></li>
+        <li><MyLink to="/contact"><FcHome />Contact</MyLink></li>
         {
             user && <>
-                <li><MyLink to="/myProducts"><BsMortarboardFill />My Products</MyLink></li>
-                <li><MyLink to="/myRating"><FcApproval />My Rating</MyLink></li>
                 <li><MyLink to="/addProduct"><FcInvite />Add Product</MyLink></li>
+                <li><MyLink to="/dashboard/dashboarHome"><FcInvite />Dashboard</MyLink></li>
             </>
         }
     </>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa6';
 
-const Rating = ({ product }) => {
+const MyProductCard = ({ product }) => {
     // const { posted_by, rating, productName, index } = product;
     if (!Array.isArray(product)) {
         return <h2 className="text-center text-red-500">Product is not an array</h2>;
@@ -9,6 +9,7 @@ const Rating = ({ product }) => {
     return (
 
         product.map((item) => {
+            const { _id, property_name, category, description, location, property_image, price } = item;
             return (
                 
                 <tr className='bg-sky-500/100 my-5'>
@@ -16,30 +17,13 @@ const Rating = ({ product }) => {
                         <FaStar />
                     </th>
                     <td>
-                        <div className="flex items-center gap-3">
-                            <div className="avatar">
-                                <div className="mask mask-squircle h-12 w-12">
-                                    <img
-                                        src={item.posted_by.profile_photo}
-                                        alt="Avatar Tailwind CSS Component" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="font-bold">{item.posted_by.name}</div>
-                                {/* <div className="text-sm opacity-50">{item.posted_by.email}</div> */}
-                            </div>
-
-                        </div>
+                        <div><h1>{item.property_name}</h1></div>
                     </td>
+                    <td>{item.category}</td>
                     <td>
-                        <div><h1>{item.productName}</h1></div>
+                        <div className="btn btn-ghost btn-xs">{item.location}</div>
                     </td>
-                    <td>{item.rating}-Star</td>
-                    <td>
-                        <div className="btn btn-ghost btn-xs">{item.posted_date}</div>
-                    </td>
-                    <td>
-                    <div className="flex items-center gap-3">
+                    <td className="flex items-center gap-3">
                         <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
                                 <img
@@ -51,7 +35,6 @@ const Rating = ({ product }) => {
                             <div className="font-bold">{item.category}</div>
                         </div>
 
-                    </div>
                     </td>
                 </tr>
                 );
@@ -59,4 +42,4 @@ const Rating = ({ product }) => {
     );
 };
 
-export default Rating;
+export default MyProductCard;

@@ -36,7 +36,7 @@ const ProductDetails = () => {
             }
         }
 
-        fetch(`${process.env.backendURL}/users`, {
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/users`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -66,7 +66,7 @@ const ProductDetails = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`${process.env.backendURL}/products/${product._id}`, {
+                fetch(`${import.meta.env.VITE_BACKEND_URL}/products/${product._id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-type": "application/json",

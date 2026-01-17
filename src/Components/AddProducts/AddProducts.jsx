@@ -28,7 +28,7 @@ const AddProducts = () => {
             }
         }
         
-        fetch(`${process.env.backendURL}/products`,{
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/products`,{
             method: "POST",
             headers: {
                 "Content-type" : "application/json",

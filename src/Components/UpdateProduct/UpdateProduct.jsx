@@ -21,7 +21,7 @@ const UpdateProduct = () => {
             property_image: e.target.image.value,
         }
 
-        fetch(`${process.env.backendURL}/products/${product._id}`, {
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/products/${product._id}`, {
             method: "PUT",
             headers: {
                 "Content-type": "application/json",

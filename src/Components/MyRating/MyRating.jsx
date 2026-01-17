@@ -11,7 +11,7 @@ const MyRating = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch(`${process.env.backendURL}/myRating?email=${user?.email}`)
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/myRating?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -20,7 +20,11 @@ const MyRating = () => {
             })
     }, [user])
     if (loading) {
-        return <div>loading.....</div>
+        return (
+            <div className='w-full justify-center h-[400px] text-center py-[200px]'>
+                <span className="loading loading-bars loading-xl"></span>
+            </div>
+        )
     }
     return (
         <div className="overflow-x-auto ">

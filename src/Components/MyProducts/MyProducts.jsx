@@ -1,6 +1,8 @@
 import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
 import Product from '../Products/Product';
+import { FaStar } from 'react-icons/fa6';
+
 
 const MyProducts = () => {
     const { user } = use(AuthContext);
@@ -8,7 +10,7 @@ const MyProducts = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch(`${process.env.backendURL}/myProducts?email=${user?.email}`)
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/myProducts?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -17,17 +19,30 @@ const MyProducts = () => {
             })
     }, [user])
     if (loading) {
-        return <div>loading.....</div>
+        return (
+            <div className='w-full justify-center h-[400px] text-center py-[200px]'>
+                <span className="loading loading-bars loading-xl"></span>
+            </div>
+        )
     }
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        <div>
+            <div>
+                <div className='py-10 space-y-5'>
+                    <h2 className='text-5xl font-bold text-center'>My <span className='text-red-600'>Products</span></h2>
+                </div>
+            </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5'>
             {
                 product.map(product =>
                     <Product key={product._id} product={product}></Product>
                 )
             }
         </div>
+
+        </div>
+        
     );
 };
 

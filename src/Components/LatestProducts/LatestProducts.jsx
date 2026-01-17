@@ -8,7 +8,7 @@ const LatestProducts = () => {
 
     useEffect(() =>{
         const navigat =() =>{
-            fetch(`${process.env.backendURL}/latest-products`)
+            fetch(`${import.meta.env.VITE_BACKEND_URL}/latest-products`)
             .then(res => res.json())
             .then(data => setDeleted(data))
         }
