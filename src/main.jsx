@@ -65,10 +65,6 @@ const router = createBrowserRouter([
         Component: Register
       },
       {
-        path: 'addProduct',
-        Component: AddProducts
-      },
-      {
         path: 'contact',
         Component: Contact
       }
@@ -89,6 +85,10 @@ const router = createBrowserRouter([
       {
         path: 'myRating',
         Component: MyRating
+      },
+      {
+        path: 'addProduct',
+        Component: AddProducts
       },
     ]
   },

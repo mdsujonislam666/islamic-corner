@@ -54,10 +54,10 @@ const AuthProvider = ({children}) => {
         loading,
     }
     if(loading){
-        return(
-        <div className='flex justify-center items-center text-center'>
-            <span className="loading loading-bars loading-xl"></span>
-        </div> 
+        return (
+            <div className='w-full justify-center h-[400px] text-center py-[200px]'>
+                <span className="loading loading-bars loading-xl"></span>
+            </div>
         )
     }
     return (

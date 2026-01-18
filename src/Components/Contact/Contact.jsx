@@ -17,7 +17,7 @@ const Contact = () => {
       </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto rounded-xl grid md:grid-cols-2 gap-10 bg-gradient-to-r from-indigo-500 via-sky-300 to-violet-500">
+      <div className="max-w-5xl mx-auto rounded-xl grid md:grid-cols-2 gap-10 bg-black">
         {/* Contact Info */}
         <div className="bg-white/10 backdrop-blur-md rounded-xl p-8">
           <h2 className="text-2xl font-semibold text-amber-300 mb-4">
@@ -38,7 +38,7 @@ const Contact = () => {
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-xl p-8 text-gray-800 shadow-lg"
+          className="bg-gradient-to-r from-indigo-500 via-sky-300 to-violet-500 rounded-xl p-8 text-gray-800 shadow-lg"
         >
           <h2 className="text-2xl font-semibold text-emerald-800 mb-6">
             Send a Message

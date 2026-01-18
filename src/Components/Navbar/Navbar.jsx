@@ -41,12 +41,8 @@ const Navbar = () => {
         <li><MyLink to="/"><FcHome />Home</MyLink></li>
         <li><MyLink to="/allProducts"><BsFillCartCheckFill />All Products</MyLink></li>
         <li><MyLink to="/contact"><FcHome />Contact</MyLink></li>
-        {
-            user && <>
-                <li><MyLink to="/addProduct"><FcInvite />Add Product</MyLink></li>
-                <li><MyLink to="/dashboard/dashboarHome"><FcInvite />Dashboard</MyLink></li>
-            </>
-        }
+        <li><MyLink to="/dashboard/dashboarHome"><FcInvite />Dashboard</MyLink></li>
+            
     </>
 
     return (
